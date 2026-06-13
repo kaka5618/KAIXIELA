@@ -1,0 +1,45 @@
+.profile-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 52rpx 34rpx;
+  text-align: center;
+}
+
+.avatar {
+  align-items: center;
+  background: #e8f7ef;
+  border-radius: 36rpx;
+  display: flex;
+  font-size: 72rpx;
+  height: 128rpx;
+  justify-content: center;
+  width: 128rpx;
+}
+
+.profile-title {
+  color: #14324b;
+  font-size: 38rpx;
+  font-weight: 850;
+  margin-top: 22rpx;
+}
+
+.profile-desc {
+  color: #637587;
+  font-size: 28rpx;
+  line-height: 1.65;
+  margin-top: 14rpx;
+}
+
+.rule-card {
+  margin-top: 22rpx;
+  padding: 30rpx;
+}
+
+.rule-item {
+  border-top: 1rpx solid #edf2f7;
+  color: #405569;
+  font-size: 28rpx;
+  line-height: 1.7;
+  padding: 18rpx 0;
+}

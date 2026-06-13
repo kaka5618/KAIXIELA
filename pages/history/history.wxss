@@ -1,0 +1,135 @@
+.history-head {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28rpx;
+}
+
+.page-title {
+  color: #14324b;
+  font-size: 44rpx;
+  font-weight: 850;
+}
+
+.page-desc {
+  color: #637587;
+  font-size: 28rpx;
+  line-height: 1.55;
+  margin-top: 10rpx;
+}
+
+.history-count {
+  background: #e8f7ef;
+  border-radius: 999rpx;
+  color: #14805e;
+  font-size: 25rpx;
+  font-weight: 800;
+  padding: 14rpx 18rpx;
+}
+
+.empty-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 56rpx 34rpx;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 72rpx;
+}
+
+.empty-title {
+  color: #19324a;
+  font-size: 34rpx;
+  font-weight: 800;
+  margin-top: 18rpx;
+}
+
+.empty-desc {
+  color: #6f7f8f;
+  font-size: 27rpx;
+  line-height: 1.6;
+  margin: 12rpx 0 28rpx;
+}
+
+.history-card {
+  margin-bottom: 22rpx;
+  padding: 28rpx;
+}
+
+.history-card-top {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.card-title {
+  color: #19324a;
+  font-size: 34rpx;
+  font-weight: 850;
+}
+
+.card-meta {
+  color: #6f7f8f;
+  font-size: 25rpx;
+  margin-top: 8rpx;
+}
+
+.delete-btn {
+  background: #fff0f0;
+  border-radius: 999rpx;
+  color: #d94848;
+  flex-shrink: 0;
+  font-size: 24rpx;
+  font-weight: 800;
+  min-height: 58rpx;
+  padding: 0 20rpx;
+}
+
+.mini-materials {
+  margin-top: 22rpx;
+}
+
+.mini-material {
+  border-top: 1rpx solid #edf2f7;
+  display: flex;
+  gap: 14rpx;
+  padding: 16rpx 0;
+}
+
+.mini-tag {
+  color: #14805e;
+  flex-shrink: 0;
+  font-size: 25rpx;
+  font-weight: 800;
+  width: 120rpx;
+}
+
+.mini-text {
+  color: #405569;
+  flex: 1;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.outline-preview {
+  background: #f7fbff;
+  border-radius: 18rpx;
+  margin-top: 14rpx;
+  padding: 18rpx 20rpx;
+}
+
+.preview-title {
+  color: #19324a;
+  font-size: 27rpx;
+  font-weight: 800;
+  margin-bottom: 8rpx;
+}
+
+.preview-line {
+  color: #52687b;
+  font-size: 25rpx;
+  line-height: 1.6;
+}

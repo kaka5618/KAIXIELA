@@ -1,0 +1,40 @@
+<view class="page history-page">
+  <view class="history-head">
+    <view>
+      <view class="page-title">探险记录</view>
+      <view class="page-desc">回看以前收集过的作文素材宝石。</view>
+    </view>
+    <view class="history-count">{{history.length}} 篇</view>
+  </view>
+
+  <view wx:if="{{history.length === 0}}" class="card empty-card">
+    <view class="empty-icon">🧭</view>
+    <view class="empty-title">还没有探险记录</view>
+    <view class="empty-desc">去输入一个作文题目，收集第一张探险收获卡吧。</view>
+    <button class="primary-button" bindtap="goCreate">开始探险</button>
+  </view>
+
+  <view wx:else class="history-list">
+    <view wx:for="{{history}}" wx:key="id" class="card history-card">
+      <view class="history-card-top">
+        <view>
+          <view class="card-title">{{item.title}}</view>
+          <view class="card-meta">{{item.grade}} · {{item.typeName}} · {{item.materials.length}} 颗宝石</view>
+        </view>
+        <button class="delete-btn" data-id="{{item.id}}" bindtap="deleteCard">删除</button>
+      </view>
+
+      <view class="mini-materials">
+        <view wx:for="{{item.materials}}" wx:key="id" wx:for-item="material" class="mini-material">
+          <text class="mini-tag">{{material.title}}</text>
+          <text class="mini-text">{{material.content}}</text>
+        </view>
+      </view>
+
+      <view class="outline-preview">
+        <view class="preview-title">提纲</view>
+        <view wx:for="{{item.outline}}" wx:key="*this" class="preview-line">{{index + 1}}. {{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

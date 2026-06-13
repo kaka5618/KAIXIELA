@@ -1,0 +1,405 @@
+.hero {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28rpx;
+}
+
+.app-title {
+  color: #14324b;
+  font-size: 48rpx;
+  font-weight: 800;
+  letter-spacing: 1rpx;
+}
+
+.app-subtitle {
+  color: #637587;
+  font-size: 28rpx;
+  line-height: 1.55;
+  margin-top: 12rpx;
+  max-width: 520rpx;
+}
+
+.hero-badge {
+  align-items: center;
+  background: #e8f7ef;
+  border-radius: 999rpx;
+  color: #14805e;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 23rpx;
+  font-weight: 700;
+  gap: 8rpx;
+  padding: 16rpx 18rpx;
+}
+
+.badge-icon {
+  font-size: 22rpx;
+}
+
+.setup-card,
+.quest-card,
+.collected-card,
+.result-card,
+.principle-card {
+  padding: 30rpx;
+}
+
+.topic-input {
+  background: #f3f8fc;
+  border: 1rpx solid #dceaf5;
+  border-radius: 20rpx;
+  color: #19324a;
+  font-size: 32rpx;
+  font-weight: 700;
+  height: 92rpx;
+  margin-top: 28rpx;
+  padding: 0 24rpx;
+}
+
+.requirement-input,
+.answer-box {
+  background: #f3f8fc;
+  border: 1rpx solid #dceaf5;
+  border-radius: 20rpx;
+  color: #24384c;
+  font-size: 29rpx;
+  line-height: 1.5;
+  margin-top: 18rpx;
+  min-height: 112rpx;
+  padding: 24rpx;
+  width: 100%;
+}
+
+.field-label {
+  color: #43566a;
+  font-size: 26rpx;
+  font-weight: 700;
+  margin: 30rpx 0 16rpx;
+}
+
+.grade-row,
+.action-row,
+.result-actions {
+  display: flex;
+  gap: 16rpx;
+}
+
+.grade-chip {
+  background: #eef6fb;
+  border: 1rpx solid #d7e8f3;
+  border-radius: 999rpx;
+  color: #52687b;
+  font-size: 26rpx;
+  font-weight: 700;
+  padding: 16rpx 22rpx;
+}
+
+.grade-chip.selected {
+  background: #e8f7ef;
+  border-color: #8eddbf;
+  color: #14805e;
+}
+
+.route-grid {
+  display: grid;
+  gap: 16rpx;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.route-card {
+  background: #f6f9fc;
+  border: 2rpx solid #e0ebf4;
+  border-radius: 22rpx;
+  min-height: 154rpx;
+  padding: 20rpx;
+}
+
+.route-card.active {
+  background: #f0fbf6;
+  border-color: #23b47e;
+  box-shadow: 0 12rpx 28rpx rgba(35, 180, 126, 0.12);
+}
+
+.route-icon {
+  font-size: 42rpx;
+}
+
+.route-name {
+  color: #19324a;
+  font-size: 30rpx;
+  font-weight: 800;
+  margin-top: 8rpx;
+}
+
+.route-desc {
+  color: #6d7d8c;
+  font-size: 24rpx;
+  margin-top: 6rpx;
+}
+
+.start-button {
+  margin-top: 30rpx;
+}
+
+.principle-card {
+  margin-top: 22rpx;
+}
+
+.principle-title {
+  color: #19324a;
+  font-size: 30rpx;
+  font-weight: 800;
+  margin-bottom: 14rpx;
+}
+
+.principle-item {
+  color: #5e7183;
+  font-size: 26rpx;
+  line-height: 1.7;
+  padding-left: 4rpx;
+}
+
+.quest-top,
+.result-head,
+.material-top {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.route-kicker {
+  color: #14805e;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+.quest-title,
+.result-title {
+  color: #19324a;
+  font-size: 38rpx;
+  font-weight: 850;
+  margin-top: 8rpx;
+}
+
+.quest-count {
+  background: #eef8ff;
+  border-radius: 999rpx;
+  color: #2d8cff;
+  font-size: 25rpx;
+  font-weight: 800;
+  padding: 12rpx 18rpx;
+}
+
+.gem-track {
+  display: flex;
+  gap: 12rpx;
+  margin: 30rpx 0;
+}
+
+.gem-dot {
+  background: #dce8f2;
+  border-radius: 999rpx;
+  flex: 1;
+  height: 18rpx;
+}
+
+.gem-dot.done {
+  background: #23b47e;
+}
+
+.gem-dot.current {
+  background: #f3a51f;
+}
+
+.guide {
+  display: flex;
+  gap: 18rpx;
+}
+
+.guide-avatar {
+  align-items: center;
+  background: #e8f7ef;
+  border-radius: 22rpx;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 44rpx;
+  height: 82rpx;
+  justify-content: center;
+  width: 82rpx;
+}
+
+.guide-bubble {
+  background: #f5f9fd;
+  border-radius: 22rpx;
+  color: #1d2b3a;
+  flex: 1;
+  padding: 22rpx;
+}
+
+.guide-name {
+  color: #14805e;
+  font-size: 24rpx;
+  font-weight: 800;
+  margin-bottom: 8rpx;
+}
+
+.guide-question {
+  font-size: 31rpx;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.answer-box {
+  min-height: 180rpx;
+}
+
+.voice-button,
+.submit-button {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  font-size: 28rpx;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 86rpx;
+}
+
+.voice-button {
+  background: #eef6fb;
+  color: #2d607f;
+}
+
+.submit-button {
+  background: #23b47e;
+  color: #ffffff;
+}
+
+.feedback {
+  background: #fff7e6;
+  border-radius: 18rpx;
+  color: #8a5b00;
+  font-size: 26rpx;
+  line-height: 1.55;
+  margin-top: 20rpx;
+  padding: 18rpx 20rpx;
+}
+
+.collected-card {
+  margin-top: 22rpx;
+}
+
+.empty-tip {
+  color: #7b8794;
+  font-size: 26rpx;
+  margin-top: 18rpx;
+}
+
+.answer-item {
+  border-top: 1rpx solid #edf2f7;
+  padding: 18rpx 0;
+}
+
+.answer-gem {
+  color: #14805e;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+.answer-text {
+  color: #34495e;
+  font-size: 28rpx;
+  line-height: 1.55;
+  margin-top: 8rpx;
+}
+
+.gem-medal {
+  font-size: 58rpx;
+}
+
+.result-section {
+  margin-top: 34rpx;
+}
+
+.material-card {
+  background: #f7fbff;
+  border: 1rpx solid #e3edf5;
+  border-radius: 20rpx;
+  margin-top: 16rpx;
+  padding: 22rpx;
+}
+
+.material-badge {
+  background: #e8f7ef;
+  border-radius: 999rpx;
+  color: #14805e;
+  font-size: 22rpx;
+  font-weight: 800;
+  padding: 8rpx 14rpx;
+}
+
+.material-title {
+  color: #19324a;
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.material-content {
+  color: #405569;
+  font-size: 28rpx;
+  line-height: 1.6;
+  margin-top: 16rpx;
+}
+
+.outline-row {
+  align-items: flex-start;
+  color: #34495e;
+  display: flex;
+  font-size: 28rpx;
+  gap: 16rpx;
+  line-height: 1.55;
+  margin-top: 16rpx;
+}
+
+.outline-index {
+  align-items: center;
+  background: #eaf3ff;
+  border-radius: 999rpx;
+  color: #2d8cff;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 24rpx;
+  font-weight: 800;
+  height: 42rpx;
+  justify-content: center;
+  width: 42rpx;
+}
+
+.hint-row {
+  background: #fff9ec;
+  border-radius: 18rpx;
+  color: #63450b;
+  font-size: 27rpx;
+  line-height: 1.55;
+  margin-top: 14rpx;
+  padding: 18rpx 20rpx;
+}
+
+.next-step {
+  background: #e8f7ef;
+  border-radius: 20rpx;
+  color: #14805e;
+  font-size: 28rpx;
+  font-weight: 700;
+  line-height: 1.55;
+  margin-top: 30rpx;
+  padding: 22rpx;
+}
+
+.result-actions {
+  margin-top: 26rpx;
+}
+
+.result-actions button {
+  flex: 1;
+}

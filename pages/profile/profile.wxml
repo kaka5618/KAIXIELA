@@ -1,0 +1,14 @@
+<view class="page profile-page">
+  <view class="card profile-card">
+    <view class="avatar">🌟</view>
+    <view class="profile-title">小小探险员</view>
+    <view class="profile-desc">这里会记录你的写作灵感、素材宝石和每一次从“想不到”到“可以写”的进步。</view>
+  </view>
+
+  <view class="card rule-card">
+    <view class="section-title">产品边界</view>
+    <view class="rule-item">不生成完整范文。</view>
+    <view class="rule-item">不替你写整段作文。</view>
+    <view class="rule-item">帮助你回忆真实经历，整理自己的素材。</view>
+  </view>
+</view>

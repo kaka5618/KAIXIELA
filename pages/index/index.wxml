@@ -1,0 +1,123 @@
+<view class="page index-page">
+  <view class="hero">
+    <view>
+      <view class="app-title">灵感探险队</view>
+      <view class="app-subtitle">输入题目，收集素材宝石，写作文不再从空白开始。</view>
+    </view>
+    <view class="hero-badge">
+      <text class="badge-icon">✦</text>
+      <text>不生成范文</text>
+    </view>
+  </view>
+
+  <view wx:if="{{mode === 'setup'}}" class="setup">
+    <view class="card setup-card">
+      <view class="section-title">今天要写什么？</view>
+      <input class="topic-input" value="{{title}}" placeholder="例如：我的妈妈、难忘的一件事" bindinput="onTitleInput" />
+      <textarea class="requirement-input" value="{{requirement}}" placeholder="作文要求可以写在这里，也可以先不填" auto-height bindinput="onRequirementInput" />
+
+      <view class="field-label">选择年级</view>
+      <view class="grade-row">
+        <view wx:for="{{grades}}" wx:key="*this" class="grade-chip {{grade === item ? 'selected' : ''}}" data-grade="{{item}}" bindtap="selectGrade">{{item}}</view>
+      </view>
+
+      <view class="field-label">可能的探险路线</view>
+      <view class="route-grid">
+        <view wx:for="{{typeCards}}" wx:key="id" class="route-card {{detectedTypeId === item.id ? 'active' : ''}}">
+          <view class="route-icon">{{item.icon}}</view>
+          <view class="route-name">{{item.name}}</view>
+          <view class="route-desc">{{item.routeName}}</view>
+        </view>
+      </view>
+
+      <button class="primary-button start-button" bindtap="startAdventure">开始收集素材宝石</button>
+    </view>
+
+    <view class="card principle-card">
+      <view class="principle-title">探险规则</view>
+      <view class="principle-item">只帮你找到自己的真实素材。</view>
+      <view class="principle-item">只给短句提示，不直接写完整作文。</view>
+      <view class="principle-item">回答“不知道”也没关系，AI 会换角度问。</view>
+    </view>
+  </view>
+
+  <view wx:elif="{{mode === 'adventure'}}" class="adventure">
+    <view class="card quest-card">
+      <view class="quest-top">
+        <view>
+          <view class="route-kicker">{{adventure.routeName}}</view>
+          <view class="quest-title">{{adventure.title}}</view>
+        </view>
+        <view class="quest-count">{{adventure.currentStep + 1}} / {{adventure.prompts.length}}</view>
+      </view>
+
+      <view class="gem-track">
+        <view wx:for="{{adventure.prompts}}" wx:key="index" class="gem-dot {{index < adventure.currentStep ? 'done' : ''}} {{index === adventure.currentStep ? 'current' : ''}}"></view>
+      </view>
+
+      <view class="guide">
+        <view class="guide-avatar">🧭</view>
+        <view class="guide-bubble">
+          <view class="guide-name">探险队长</view>
+          <view class="guide-question">{{currentQuestion}}</view>
+        </view>
+      </view>
+
+      <textarea class="answer-box" value="{{answer}}" maxlength="160" placeholder="把你想到的画面、动作、话语写下来。短一点也可以。" bindinput="onAnswerInput" />
+
+      <view class="action-row">
+        <button class="voice-button" bindtap="useVoice">🎙 语音说一说</button>
+        <button class="submit-button" bindtap="submitAnswer">收下这颗宝石</button>
+      </view>
+
+      <view wx:if="{{adventure.lastFeedback}}" class="feedback">{{adventure.lastFeedback}}</view>
+    </view>
+
+    <view class="card collected-card">
+      <view class="section-title">已收集素材</view>
+      <view wx:if="{{adventure.answers.length === 0}}" class="empty-tip">还没有素材，先回答第一关问题吧。</view>
+      <view wx:for="{{adventure.answers}}" wx:key="gem" class="answer-item">
+        <view class="answer-gem">{{item.gem}}</view>
+        <view class="answer-text">{{item.answer}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class="result">
+    <view class="card result-card">
+      <view class="result-head">
+        <view>
+          <view class="route-kicker">探险收获卡</view>
+          <view class="result-title">{{harvestCard.title}}</view>
+          <view class="muted">{{harvestCard.grade}} · {{harvestCard.typeName}}</view>
+        </view>
+        <view class="gem-medal">🏅</view>
+      </view>
+
+      <view class="section-title result-section">素材宝石</view>
+      <view wx:for="{{harvestCard.materials}}" wx:key="id" class="material-card">
+        <view class="material-top">
+          <text class="material-badge">{{item.badge}}</text>
+          <text class="material-title">{{item.title}}</text>
+        </view>
+        <view class="material-content">{{item.content}}</view>
+      </view>
+
+      <view class="section-title result-section">写作提纲</view>
+      <view wx:for="{{harvestCard.outline}}" wx:key="*this" class="outline-row">
+        <view class="outline-index">{{index + 1}}</view>
+        <view>{{item}}</view>
+      </view>
+
+      <view class="section-title result-section">短句提示</view>
+      <view wx:for="{{harvestCard.hints}}" wx:key="*this" class="hint-row">{{item}}</view>
+
+      <view class="next-step">{{harvestCard.nextStep}}</view>
+
+      <view class="result-actions">
+        <button class="ghost-button" bindtap="resetAdventure">再来一次</button>
+        <button class="primary-button" bindtap="goHistory">查看记录</button>
+      </view>
+    </view>
+  </view>
+</view>
