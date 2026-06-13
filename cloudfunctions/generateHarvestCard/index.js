@@ -1,7 +1,7 @@
 const cloud = require("wx-server-sdk");
 
 const DEFAULT_AI_BASE_URL = "https://kaixiela-d6gj7ytn9c262e774.api.tcloudbasegateway.com/v1/ai/cloudbase";
-const DEFAULT_AI_MODEL = "deepseek-v4-flash";
+const DEFAULT_AI_MODEL = "hunyuan-exp";
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
