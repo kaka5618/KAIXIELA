@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.cloudbase.net/cli/cloudbaserc.schema.json",
+  "envId": "kaixiela-d6gj7ytn9c262e774",
+  "functionRoot": "cloudfunctions",
+  "functions": [
+    {
+      "name": "startAdventure",
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "timeout": 15,
+      "memorySize": 256
+    },
+    {
+      "name": "nextQuestion",
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "timeout": 30,
+      "memorySize": 512
+    },
+    {
+      "name": "generateHarvestCard",
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "timeout": 30,
+      "memorySize": 512
+    },
+    {
+      "name": "listRecords",
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "timeout": 15,
+      "memorySize": 256
+    },
+    {
+      "name": "saveRecord",
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "timeout": 15,
+      "memorySize": 256
+    },
+    {
+      "name": "deleteRecord",
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "timeout": 15,
+      "memorySize": 256
+    }
+  ]
+}
