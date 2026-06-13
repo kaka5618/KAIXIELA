@@ -1,0 +1,12 @@
+{
+  "name": "kaixiela-cloudbase-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CloudBase container health service for the Kaixiela mini program project.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

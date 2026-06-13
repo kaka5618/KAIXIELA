@@ -1,5 +1,5 @@
 {
-  "description": "作文灵感生成器 MVP",
+  "description": "开写啦微信小程序",
   "packOptions": {
     "ignore": []
   },
@@ -8,11 +8,43 @@
     "es6": true,
     "enhance": true,
     "postcss": true,
-    "minified": true
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "3.5.5",
+  "libVersion": "3.8.0",
   "appid": "touristappid",
-  "projectname": "writing-inspiration-miniapp",
+  "projectname": "KAIXIELA",
+  "cloudfunctionRoot": "cloudfunctions/",
   "condition": {}
 }

@@ -5,7 +5,7 @@
     "pages/profile/profile"
   ],
   "window": {
-    "navigationBarTitleText": "灵感探险队",
+    "navigationBarTitleText": "开写啦",
     "navigationBarBackgroundColor": "#f7fbff",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#f7fbff"
@@ -29,6 +29,11 @@
         "text": "我的"
       }
     ]
+  },
+  "permission": {
+    "scope.record": {
+      "desc": "用于把孩子的口头回答识别成文字，帮助整理作文素材"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

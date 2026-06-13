@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+.git
+node_modules
+cloudfunctions/*/node_modules
+.DS_Store
+npm-debug.log
